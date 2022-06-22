@@ -1,0 +1,379 @@
+
+
+============================== 2022-06-09 05:15:04.347350 | 0740af1b-f460-40b1-a198-01f4318d5e3f ==============================
+05:15:04.347391 [info ] [MainThread]: Running with dbt=1.1.0
+05:15:04.348002 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/srikanth.bidhaniya/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'select': ['table'], 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+05:15:04.348258 [debug] [MainThread]: Tracking: tracking
+05:15:04.348705 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1135ad550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1135ad5b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1135ad610>]}
+05:15:04.424629 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+05:15:04.425012 [debug] [MainThread]: Partial parsing: updated file: my_dbt_project://macros/snowflake/dbt/include/snowflake/macros/materializations/persistent_table_materialization.sql
+05:15:04.425175 [debug] [MainThread]: Parsing macros/snowflake/dbt/include/snowflake/macros/materializations/persistent_table_materialization.sql
+05:15:04.468910 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '0740af1b-f460-40b1-a198-01f4318d5e3f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11367bee0>]}
+05:15:04.474880 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '0740af1b-f460-40b1-a198-01f4318d5e3f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11365e2b0>]}
+05:15:04.475148 [info ] [MainThread]: Found 6 models, 0 tests, 0 snapshots, 0 analyses, 193 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+05:15:04.475380 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '0740af1b-f460-40b1-a198-01f4318d5e3f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11365e040>]}
+05:15:04.476718 [info ] [MainThread]: 
+05:15:04.477130 [debug] [MainThread]: Acquiring new snowflake connection "master"
+05:15:04.478054 [debug] [ThreadPool]: Acquiring new snowflake connection "list_TEST_DB"
+05:15:04.492183 [debug] [ThreadPool]: Using snowflake connection "list_TEST_DB"
+05:15:04.492390 [debug] [ThreadPool]: On list_TEST_DB: /* {"app": "dbt", "dbt_version": "1.1.0", "profile_name": "my_dbt_project", "target_name": "dev", "connection_name": "list_TEST_DB"} */
+
+    show terse schemas in database TEST_DB
+    limit 10000
+05:15:04.492592 [debug] [ThreadPool]: Opening a new connection, currently in state init
+05:15:11.205096 [debug] [ThreadPool]: SQL status: SUCCESS 39 in 6.71 seconds
+05:15:11.209350 [debug] [ThreadPool]: On list_TEST_DB: Close
+05:15:11.795071 [debug] [ThreadPool]: Acquiring new snowflake connection "list_TEST_DB_ECOMM"
+05:15:11.802642 [debug] [ThreadPool]: Using snowflake connection "list_TEST_DB_ECOMM"
+05:15:11.802815 [debug] [ThreadPool]: On list_TEST_DB_ECOMM: /* {"app": "dbt", "dbt_version": "1.1.0", "profile_name": "my_dbt_project", "target_name": "dev", "connection_name": "list_TEST_DB_ECOMM"} */
+
+    show terse objects in TEST_DB.ECOMM
+05:15:11.802954 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+05:15:16.312220 [debug] [ThreadPool]: SQL status: SUCCESS 8 in 4.51 seconds
+05:15:16.315790 [debug] [ThreadPool]: On list_TEST_DB_ECOMM: Close
+05:15:16.871341 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '0740af1b-f460-40b1-a198-01f4318d5e3f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11262ea90>]}
+05:15:16.872262 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+05:15:16.872758 [info ] [MainThread]: 
+05:15:16.879458 [debug] [Thread-1  ]: Began running node model.my_dbt_project.TEST_DB_DEMO1_DBT_MODEL13
+05:15:16.879889 [info ] [Thread-1  ]: 1 of 3 START persistent_table model ECOMM.TEST_DB_DEMO1_DBT_MODEL13 ............ [RUN]
+05:15:16.880422 [debug] [Thread-1  ]: Acquiring new snowflake connection "model.my_dbt_project.TEST_DB_DEMO1_DBT_MODEL13"
+05:15:16.880577 [debug] [Thread-1  ]: Began compiling node model.my_dbt_project.TEST_DB_DEMO1_DBT_MODEL13
+05:15:16.880781 [debug] [Thread-1  ]: Compiling model.my_dbt_project.TEST_DB_DEMO1_DBT_MODEL13
+05:15:16.883814 [debug] [Thread-1  ]: Writing injected SQL for node "model.my_dbt_project.TEST_DB_DEMO1_DBT_MODEL13"
+05:15:16.884685 [debug] [Thread-1  ]: finished collecting timing info
+05:15:16.884860 [debug] [Thread-1  ]: Began executing node model.my_dbt_project.TEST_DB_DEMO1_DBT_MODEL13
+05:15:16.916216 [debug] [Thread-1  ]: DatabaseName TEST_DBSchemaName DEMO1identifier DBT_MODEL13.
+05:15:16.916434 [debug] [Thread-1  ]: On "model.my_dbt_project.TEST_DB_DEMO1_DBT_MODEL13": cache miss for schema "{self.database}.{self.schema}", this is inefficient
+05:15:16.918006 [debug] [Thread-1  ]: Using snowflake connection "model.my_dbt_project.TEST_DB_DEMO1_DBT_MODEL13"
+05:15:16.918129 [debug] [Thread-1  ]: On model.my_dbt_project.TEST_DB_DEMO1_DBT_MODEL13: /* {"app": "dbt", "dbt_version": "1.1.0", "profile_name": "my_dbt_project", "target_name": "dev", "node_id": "model.my_dbt_project.TEST_DB_DEMO1_DBT_MODEL13"} */
+
+    show terse objects in TEST_DB.DEMO1
+05:15:16.918237 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+05:15:22.393817 [debug] [Thread-1  ]: SQL status: SUCCESS 14 in 5.48 seconds
+05:15:22.397315 [debug] [Thread-1  ]: with database=TEST_DB, schema=DEMO1, relations=[_ReferenceKey(database='test_db', schema='demo1', identifier='dbt_model13'), _ReferenceKey(database='test_db', schema='demo1', identifier='dbt_model13_dbt_backup_20220607152650124441'), _ReferenceKey(database='test_db', schema='demo1', identifier='dbt_model13_dbt_backup_20220607153156249184'), _ReferenceKey(database='test_db', schema='demo1', identifier='dbt_model13_dbt_backup_20220607153517201910'), _ReferenceKey(database='test_db', schema='demo1', identifier='dbt_model13_dbt_backup_20220607154517315068'), _ReferenceKey(database='test_db', schema='demo1', identifier='dbt_model13_dbt_backup_20220608125825510563'), _ReferenceKey(database='test_db', schema='demo1', identifier='dbt_model13_dbt_backup_20220608130830519762'), _ReferenceKey(database='test_db', schema='demo1', identifier='dbt_model13_dbt_backup_20220608131112165958'), _ReferenceKey(database='test_db', schema='demo1', identifier='dbt_model13_dbt_backup_20220608134339521811'), _ReferenceKey(database='test_db', schema='demo1', identifier='dbt_model13_dbt_backup_20220608135347030179'), _ReferenceKey(database='test_db', schema='demo1', identifier='dbt_model13_dbt_backup_20220608135705009848'), _ReferenceKey(database='test_db', schema='demo1', identifier='dbt_model13_dbt_backup_20220608135910930925'), _ReferenceKey(database='test_db', schema='demo1', identifier='dbt_model13_dbt_backup_20220609103517157342'), _ReferenceKey(database='test_db', schema='demo1', identifier='dbt_model13_dbt_backup_20220609104142533447')]
+05:15:22.397766 [debug] [Thread-1  ]: current_relation "TEST_DB"."DEMO1"."DBT_MODEL13"
+05:15:22.400878 [debug] [Thread-1  ]: backup_relation TEST_DB.DEMO1.DBT_MODEL13_DBT_BACKUP_20220609104522400729
+05:15:22.405130 [debug] [Thread-1  ]: target_relation TEST_DB.DEMO1.DBT_MODEL13
+05:15:22.405296 [debug] [Thread-1  ]: tmp_relation TEST_DB.DEMO1.DBT_MODEL13_DBT_TMP
+05:15:22.412911 [debug] [Thread-1  ]: Cloning existing relation "TEST_DB"."DEMO1"."DBT_MODEL13" as a backup with name TEST_DB.DEMO1.DBT_MODEL13_DBT_BACKUP_20220609104522400729
+05:15:22.413459 [debug] [Thread-1  ]: Using snowflake connection "model.my_dbt_project.TEST_DB_DEMO1_DBT_MODEL13"
+05:15:22.413597 [debug] [Thread-1  ]: On model.my_dbt_project.TEST_DB_DEMO1_DBT_MODEL13: /* {"app": "dbt", "dbt_version": "1.1.0", "profile_name": "my_dbt_project", "target_name": "dev", "node_id": "model.my_dbt_project.TEST_DB_DEMO1_DBT_MODEL13"} */
+CREATE OR REPLACE TABLE TEST_DB.DEMO1.DBT_MODEL13_DBT_BACKUP_20220609104522400729
+            CLONE "TEST_DB"."DEMO1"."DBT_MODEL13"
+05:15:23.128555 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.71 seconds
+05:15:23.129876 [debug] [Thread-1  ]: Tmp sql CREATE OR REPLACE TABLE TEST_DB.DEMO1.DBT_MODEL13_DBT_TMP (
+	FIRST_NAME VARCHAR(100),
+	LAST_NAME VARCHAR(100),
+	EMAIL VARCHAR(100),
+	STREETADDRESS VARCHAR(150),
+	CITY VARCHAR(10)
+)
+05:15:23.131950 [debug] [Thread-1  ]: Creating table TEST_DB.DEMO1.DBT_MODEL13_DBT_TMP
+05:15:23.132183 [debug] [Thread-1  ]: Writing runtime SQL for node "model.my_dbt_project.TEST_DB_DEMO1_DBT_MODEL13"
+05:15:23.133418 [debug] [Thread-1  ]: Using snowflake connection "model.my_dbt_project.TEST_DB_DEMO1_DBT_MODEL13"
+05:15:23.133584 [debug] [Thread-1  ]: On model.my_dbt_project.TEST_DB_DEMO1_DBT_MODEL13: /* {"app": "dbt", "dbt_version": "1.1.0", "profile_name": "my_dbt_project", "target_name": "dev", "node_id": "model.my_dbt_project.TEST_DB_DEMO1_DBT_MODEL13"} */
+
+            
+            
+
+    CREATE OR REPLACE TABLE TEST_DB.DEMO1.DBT_MODEL13_DBT_TMP (
+	FIRST_NAME VARCHAR(100),
+	LAST_NAME VARCHAR(100),
+	EMAIL VARCHAR(100),
+	STREETADDRESS VARCHAR(150),
+	CITY VARCHAR(10)
+)
+    ;
+05:15:23.622164 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.49 seconds
+05:15:23.633297 [debug] [Thread-1  ]: Using snowflake connection "model.my_dbt_project.TEST_DB_DEMO1_DBT_MODEL13"
+05:15:23.633466 [debug] [Thread-1  ]: On model.my_dbt_project.TEST_DB_DEMO1_DBT_MODEL13: /* {"app": "dbt", "dbt_version": "1.1.0", "profile_name": "my_dbt_project", "target_name": "dev", "node_id": "model.my_dbt_project.TEST_DB_DEMO1_DBT_MODEL13"} */
+
+    describe table TEST_DB.DEMO1.DBT_MODEL13_DBT_TMP
+05:15:24.063562 [debug] [Thread-1  ]: SQL status: SUCCESS 5 in 0.43 seconds
+05:15:24.067944 [debug] [Thread-1  ]: Using snowflake connection "model.my_dbt_project.TEST_DB_DEMO1_DBT_MODEL13"
+05:15:24.068127 [debug] [Thread-1  ]: On model.my_dbt_project.TEST_DB_DEMO1_DBT_MODEL13: /* {"app": "dbt", "dbt_version": "1.1.0", "profile_name": "my_dbt_project", "target_name": "dev", "node_id": "model.my_dbt_project.TEST_DB_DEMO1_DBT_MODEL13"} */
+
+    describe table "TEST_DB"."DEMO1"."DBT_MODEL13"
+05:15:24.458686 [debug] [Thread-1  ]: SQL status: SUCCESS 5 in 0.39 seconds
+05:15:24.462755 [debug] [Thread-1  ]: Using snowflake connection "model.my_dbt_project.TEST_DB_DEMO1_DBT_MODEL13"
+05:15:24.462940 [debug] [Thread-1  ]: On model.my_dbt_project.TEST_DB_DEMO1_DBT_MODEL13: /* {"app": "dbt", "dbt_version": "1.1.0", "profile_name": "my_dbt_project", "target_name": "dev", "node_id": "model.my_dbt_project.TEST_DB_DEMO1_DBT_MODEL13"} */
+
+    describe table "TEST_DB"."DEMO1"."DBT_MODEL13"
+05:15:24.803005 [debug] [Thread-1  ]: SQL status: SUCCESS 5 in 0.34 seconds
+05:15:24.806966 [debug] [Thread-1  ]: Using snowflake connection "model.my_dbt_project.TEST_DB_DEMO1_DBT_MODEL13"
+05:15:24.807155 [debug] [Thread-1  ]: On model.my_dbt_project.TEST_DB_DEMO1_DBT_MODEL13: /* {"app": "dbt", "dbt_version": "1.1.0", "profile_name": "my_dbt_project", "target_name": "dev", "node_id": "model.my_dbt_project.TEST_DB_DEMO1_DBT_MODEL13"} */
+
+    describe table TEST_DB.DEMO1.DBT_MODEL13_DBT_TMP
+05:15:25.138459 [debug] [Thread-1  ]: SQL status: SUCCESS 5 in 0.33 seconds
+05:15:25.142500 [debug] [Thread-1  ]: Using snowflake connection "model.my_dbt_project.TEST_DB_DEMO1_DBT_MODEL13"
+05:15:25.142690 [debug] [Thread-1  ]: On model.my_dbt_project.TEST_DB_DEMO1_DBT_MODEL13: /* {"app": "dbt", "dbt_version": "1.1.0", "profile_name": "my_dbt_project", "target_name": "dev", "node_id": "model.my_dbt_project.TEST_DB_DEMO1_DBT_MODEL13"} */
+
+    describe table TEST_DB.DEMO1.DBT_MODEL13_DBT_TMP
+05:15:25.547816 [debug] [Thread-1  ]: SQL status: SUCCESS 5 in 0.4 seconds
+05:15:25.552017 [debug] [Thread-1  ]: Using snowflake connection "model.my_dbt_project.TEST_DB_DEMO1_DBT_MODEL13"
+05:15:25.552213 [debug] [Thread-1  ]: On model.my_dbt_project.TEST_DB_DEMO1_DBT_MODEL13: /* {"app": "dbt", "dbt_version": "1.1.0", "profile_name": "my_dbt_project", "target_name": "dev", "node_id": "model.my_dbt_project.TEST_DB_DEMO1_DBT_MODEL13"} */
+
+    describe table "TEST_DB"."DEMO1"."DBT_MODEL13"
+05:15:25.878437 [debug] [Thread-1  ]: SQL status: SUCCESS 5 in 0.33 seconds
+05:15:25.885131 [debug] [Thread-1  ]: Using snowflake connection "model.my_dbt_project.TEST_DB_DEMO1_DBT_MODEL13"
+05:15:25.885323 [debug] [Thread-1  ]: On model.my_dbt_project.TEST_DB_DEMO1_DBT_MODEL13: /* {"app": "dbt", "dbt_version": "1.1.0", "profile_name": "my_dbt_project", "target_name": "dev", "node_id": "model.my_dbt_project.TEST_DB_DEMO1_DBT_MODEL13"} */
+drop table if exists TEST_DB.DEMO1.DBT_MODEL13_DBT_TMP cascade
+05:15:26.228183 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.34 seconds
+05:15:26.230145 [debug] [Thread-1  ]: finished collecting timing info
+05:15:26.230414 [debug] [Thread-1  ]: On model.my_dbt_project.TEST_DB_DEMO1_DBT_MODEL13: Close
+05:15:26.775541 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '0740af1b-f460-40b1-a198-01f4318d5e3f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11405d2e0>]}
+05:15:26.776238 [info ] [Thread-1  ]: 1 of 3 OK created persistent_table model ECOMM.TEST_DB_DEMO1_DBT_MODEL13 ....... [[32mSUCCESS 1[0m in 9.90s]
+05:15:26.776930 [debug] [Thread-1  ]: Finished running node model.my_dbt_project.TEST_DB_DEMO1_DBT_MODEL13
+05:15:26.777234 [debug] [Thread-1  ]: Began running node model.my_dbt_project.TEST_DB_DEMO_DBT_MODEL1
+05:15:26.777793 [info ] [Thread-1  ]: 2 of 3 START persistent_table model ECOMM.TEST_DB_DEMO_DBT_MODEL1 .............. [RUN]
+05:15:26.778484 [debug] [Thread-1  ]: Acquiring new snowflake connection "model.my_dbt_project.TEST_DB_DEMO_DBT_MODEL1"
+05:15:26.778666 [debug] [Thread-1  ]: Began compiling node model.my_dbt_project.TEST_DB_DEMO_DBT_MODEL1
+05:15:26.778895 [debug] [Thread-1  ]: Compiling model.my_dbt_project.TEST_DB_DEMO_DBT_MODEL1
+05:15:26.781871 [debug] [Thread-1  ]: Writing injected SQL for node "model.my_dbt_project.TEST_DB_DEMO_DBT_MODEL1"
+05:15:26.782889 [debug] [Thread-1  ]: finished collecting timing info
+05:15:26.783095 [debug] [Thread-1  ]: Began executing node model.my_dbt_project.TEST_DB_DEMO_DBT_MODEL1
+05:15:26.784634 [debug] [Thread-1  ]: DatabaseName TEST_DBSchemaName DEMOidentifier DBT_MODEL1.
+05:15:26.784850 [debug] [Thread-1  ]: On "model.my_dbt_project.TEST_DB_DEMO_DBT_MODEL1": cache miss for schema "{self.database}.{self.schema}", this is inefficient
+05:15:26.786646 [debug] [Thread-1  ]: Using snowflake connection "model.my_dbt_project.TEST_DB_DEMO_DBT_MODEL1"
+05:15:26.786794 [debug] [Thread-1  ]: On model.my_dbt_project.TEST_DB_DEMO_DBT_MODEL1: /* {"app": "dbt", "dbt_version": "1.1.0", "profile_name": "my_dbt_project", "target_name": "dev", "node_id": "model.my_dbt_project.TEST_DB_DEMO_DBT_MODEL1"} */
+
+    show terse objects in TEST_DB.DEMO
+05:15:26.786930 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+05:15:30.996658 [debug] [Thread-1  ]: SQL status: SUCCESS 367 in 4.21 seconds
+05:15:31.011378 [debug] [Thread-1  ]: with database=TEST_DB, schema=DEMO, relations=[_ReferenceKey(database='test_db', schema='demo', identifier='${stg_target_table_db}'), _ReferenceKey(database='test_db', schema='demo', identifier='${target_table_db}'), _ReferenceKey(database='test_db', schema='demo', identifier='active_ees_cws'), _ReferenceKey(database='test_db', schema='demo', identifier='active_ees_cws1'), _ReferenceKey(database='test_db', schema='demo', identifier='active_ees_cws2'), _ReferenceKey(database='test_db', schema='demo', identifier='all_json_response'), _ReferenceKey(database='test_db', schema='demo', identifier='all_users_info'), _ReferenceKey(database='test_db', schema='demo', identifier='api_full_data_load_view'), _ReferenceKey(database='test_db', schema='demo', identifier='audit'), _ReferenceKey(database='test_db', schema='demo', identifier='activities_clickemail'), _ReferenceKey(database='test_db', schema='demo', identifier='bookings_universe'), _ReferenceKey(database='test_db', schema='demo', identifier='bu_ebc_activity'), _ReferenceKey(database='test_db', schema='demo', identifier='bu_ebc_activity_incr'), _ReferenceKey(database='test_db', schema='demo', identifier='callidus_quotes'), _ReferenceKey(database='test_db', schema='demo', identifier='callidus_recon'), _ReferenceKey(database='test_db', schema='demo', identifier='customers'), _ReferenceKey(database='test_db', schema='demo', identifier='customer_story_annual_targets_bu'), _ReferenceKey(database='test_db', schema='demo', identifier='customer_story_annual_targets_bu_1'), _ReferenceKey(database='test_db', schema='demo', identifier='c_b_lu_cntry_tier_map'), _ReferenceKey(database='test_db', schema='demo', identifier='c_b_lu_hg_vendor_view'), _ReferenceKey(database='test_db', schema='demo', identifier='c_b_rel_pty_hg_account'), _ReferenceKey(database='test_db', schema='demo', identifier='customer_orders'), _ReferenceKey(database='test_db', schema='demo', identifier='datatype_test'), _ReferenceKey(database='test_db', schema='demo', identifier='dbt_model1'), _ReferenceKey(database='test_db', schema='demo', identifier='dbt_model13'), _ReferenceKey(database='test_db', schema='demo', identifier='dbt_model13_dbt_backup_20220606204343575515'), _ReferenceKey(database='test_db', schema='demo', identifier='dbt_model13_dbt_backup_20220607094950050339'), _ReferenceKey(database='test_db', schema='demo', identifier='dbt_model13_dbt_backup_20220607115555549553'), _ReferenceKey(database='test_db', schema='demo', identifier='dbt_model13_dbt_backup_20220607134148612374'), _ReferenceKey(database='test_db', schema='demo', identifier='dbt_model13_dbt_backup_20220607161128824549'), _ReferenceKey(database='test_db', schema='demo', identifier='dbt_model13_dbt_backup_20220608125838423751'), _ReferenceKey(database='test_db', schema='demo', identifier='dbt_model13_dbt_backup_20220608135356444257'), _ReferenceKey(database='test_db', schema='demo', identifier='dbt_model13_dbt_backup_20220608135715097367'), _ReferenceKey(database='test_db', schema='demo', identifier='dbt_model13_dbt_backup_20220609103523665260'), _ReferenceKey(database='test_db', schema='demo', identifier='dbt_model1_dbt_backup_20220531163400018147'), _ReferenceKey(database='test_db', schema='demo', identifier='dbt_model1_dbt_backup_20220531175136395603'), _ReferenceKey(database='test_db', schema='demo', identifier='dbt_model1_dbt_backup_20220531175632131405'), _ReferenceKey(database='test_db', schema='demo', identifier='dbt_model1_dbt_backup_20220531180015707692'), _ReferenceKey(database='test_db', schema='demo', identifier='dbt_model1_dbt_backup_20220531180757673207'), _ReferenceKey(database='test_db', schema='demo', identifier='dbt_model1_dbt_backup_20220531204017751006'), _ReferenceKey(database='test_db', schema='demo', identifier='dbt_model1_dbt_backup_20220531210827727658'), _ReferenceKey(database='test_db', schema='demo', identifier='dbt_model1_dbt_backup_20220531211130973707'), _ReferenceKey(database='test_db', schema='demo', identifier='dbt_model1_dbt_backup_20220531211318613918'), _ReferenceKey(database='test_db', schema='demo', identifier='dbt_model1_dbt_backup_20220606185343335331'), _ReferenceKey(database='test_db', schema='demo', identifier='dbt_model1_dbt_backup_20220606191721046960'), _ReferenceKey(database='test_db', schema='demo', identifier='dbt_model1_dbt_backup_20220606202357829021'), _ReferenceKey(database='test_db', schema='demo', identifier='dbt_model1_dbt_backup_20220606203033808198'), _ReferenceKey(database='test_db', schema='demo', identifier='dbt_model1_dbt_backup_20220606203429208667'), _ReferenceKey(database='test_db', schema='demo', identifier='dbt_model1_dbt_backup_20220606203751753287'), _ReferenceKey(database='test_db', schema='demo', identifier='dbt_model1_dbt_backup_20220606204150276991'), _ReferenceKey(database='test_db', schema='demo', identifier='dbt_model1_dbt_backup_20220606204328604916'), _ReferenceKey(database='test_db', schema='demo', identifier='dbt_model1_dbt_backup_20220607094939172768'), _ReferenceKey(database='test_db', schema='demo', identifier='dbt_model1_dbt_backup_20220607105110571766'), _ReferenceKey(database='test_db', schema='demo', identifier='dbt_model1_dbt_backup_20220607105450166757'), _ReferenceKey(database='test_db', schema='demo', identifier='dbt_model1_dbt_backup_20220607110737767499'), _ReferenceKey(database='test_db', schema='demo', identifier='dbt_model1_dbt_backup_20220607111039492617'), _ReferenceKey(database='test_db', schema='demo', identifier='dbt_model1_dbt_backup_20220607112600715634'), _ReferenceKey(database='test_db', schema='demo', identifier='dbt_model1_dbt_backup_20220607114001818197'), _ReferenceKey(database='test_db', schema='demo', identifier='dbt_model1_dbt_backup_20220607115308192173'), _ReferenceKey(database='test_db', schema='demo', identifier='dbt_model1_dbt_backup_20220607115550783694'), _ReferenceKey(database='test_db', schema='demo', identifier='dbt_model1_dbt_backup_20220607133957504876'), _ReferenceKey(database='test_db', schema='demo', identifier='dbt_model1_dbt_backup_20220607140348030197'), _ReferenceKey(database='test_db', schema='demo', identifier='dbt_model1_dbt_backup_20220607151846374869'), _ReferenceKey(database='test_db', schema='demo', identifier='dbt_model1_dbt_backup_20220607152349034428'), _ReferenceKey(database='test_db', schema='demo', identifier='dbt_model1_dbt_backup_20220607152659322729'), _ReferenceKey(database='test_db', schema='demo', identifier='dbt_model1_dbt_backup_20220607153206380982'), _ReferenceKey(database='test_db', schema='demo', identifier='dbt_model1_dbt_backup_20220607153527026663'), _ReferenceKey(database='test_db', schema='demo', identifier='dbt_model1_dbt_backup_20220607154527522898'), _ReferenceKey(database='test_db', schema='demo', identifier='dbt_model1_dbt_backup_20220607161336795312'), _ReferenceKey(database='test_db', schema='demo', identifier='dbt_model1_dbt_backup_20220608125831595350'), _ReferenceKey(database='test_db', schema='demo', identifier='dbt_model1_dbt_backup_20220608131121115408'), _ReferenceKey(database='test_db', schema='demo', identifier='dbt_model1_dbt_backup_20220608134348767933'), _ReferenceKey(database='test_db', schema='demo', identifier='dbt_model1_dbt_backup_20220608135920642990'), _ReferenceKey(database='test_db', schema='demo', identifier='dbt_model1_dbt_backup_20220609104152183517'), _ReferenceKey(database='test_db', schema='demo', identifier='db_full_data_load_view'), _ReferenceKey(database='test_db', schema='demo', identifier='demo_cust'), _ReferenceKey(database='test_db', schema='demo', identifier='demo_json'), _ReferenceKey(database='test_db', schema='demo', identifier='demo_json_raw'), _ReferenceKey(database='test_db', schema='demo', identifier='demo_table'), _ReferenceKey(database='test_db', schema='demo', identifier='demo_tt'), _ReferenceKey(database='test_db', schema='demo', identifier='dummy'), _ReferenceKey(database='test_db', schema='demo', identifier='d_fpa_bookings_product'), _ReferenceKey(database='test_db', schema='demo', identifier='d_fpa_bookings_product_1'), _ReferenceKey(database='test_db', schema='demo', identifier='d_fpa_tacv_forecast'), _ReferenceKey(database='test_db', schema='demo', identifier='d_fpa_tacv_forecast_bu'), _ReferenceKey(database='test_db', schema='demo', identifier='drift_conversations_response'), _ReferenceKey(database='test_db', schema='demo', identifier='drift_user_response'), _ReferenceKey(database='test_db', schema='demo', identifier='elt_db_audit'), _ReferenceKey(database='test_db', schema='demo', identifier='elt_db_metadata'), _ReferenceKey(database='test_db', schema='demo', identifier='emp'), _ReferenceKey(database='test_db', schema='demo', identifier='employee'), _ReferenceKey(database='test_db', schema='demo', identifier='employee_table'), _ReferenceKey(database='test_db', schema='demo', identifier='emp_colcasetst'), _ReferenceKey(database='test_db', schema='demo', identifier='emp_colcasetst1'), _ReferenceKey(database='test_db', schema='demo', identifier='emp_colcasetst_n'), _ReferenceKey(database='test_db', schema='demo', identifier='emp_colcasetst_new'), _ReferenceKey(database='test_db', schema='demo', identifier='emp_detail'), _ReferenceKey(database='test_db', schema='demo', identifier='emp_dtl'), _ReferenceKey(database='test_db', schema='demo', identifier='emp_incre'), _ReferenceKey(database='test_db', schema='demo', identifier='emp_table'), _ReferenceKey(database='test_db', schema='demo', identifier='emp_table_sec'), _ReferenceKey(database='test_db', schema='demo', identifier='emp_test1'), _ReferenceKey(database='test_db', schema='demo', identifier='emp_test2'), _ReferenceKey(database='test_db', schema='demo', identifier='em_customer_base'), _ReferenceKey(database='test_db', schema='demo', identifier='em_fixeddataplusquota_rt'), _ReferenceKey(database='test_db', schema='demo', identifier='em_licensing_decoder'), _ReferenceKey(database='test_db', schema='demo', identifier='em_mktg_spend'), _ReferenceKey(database='test_db', schema='demo', identifier='em_mkt_fspnewlogo'), _ReferenceKey(database='test_db', schema='demo', identifier='em_mkt_funnel_area_rt'), _ReferenceKey(database='test_db', schema='demo', identifier='em_mkt_mcc_area_funnel'), _ReferenceKey(database='test_db', schema='demo', identifier='em_opportunity_partner_deal'), _ReferenceKey(database='test_db', schema='demo', identifier='em_sales_account'), _ReferenceKey(database='test_db', schema='demo', identifier='em_sales_account_rt'), _ReferenceKey(database='test_db', schema='demo', identifier='em_sales_opportunity_extended_rt'), _ReferenceKey(database='test_db', schema='demo', identifier='em_sales_product_quota_rt'), _ReferenceKey(database='test_db', schema='demo', identifier='em_unifiedss_sales_account'), _ReferenceKey(database='test_db', schema='demo', identifier='error_etl_log'), _ReferenceKey(database='test_db', schema='demo', identifier='etl_audit'), _ReferenceKey(database='test_db', schema='demo', identifier='email_delivered'), _ReferenceKey(database='test_db', schema='demo', identifier='emp_test'), _ReferenceKey(database='test_db', schema='demo', identifier='ff_quantity_adj_mapping'), _ReferenceKey(database='test_db', schema='demo', identifier='file_full_data_load_view'), _ReferenceKey(database='test_db', schema='demo', identifier='final_tcurr'), _ReferenceKey(database='test_db', schema='demo', identifier='fpa_sales_renewal_field_quota'), _ReferenceKey(database='test_db', schema='demo', identifier='header_badges'), _ReferenceKey(database='test_db', schema='demo', identifier='initial_load_view'), _ReferenceKey(database='test_db', schema='demo', identifier='integration_quote_state'), _ReferenceKey(database='test_db', schema='demo', identifier='invoice_schedule'), _ReferenceKey(database='test_db', schema='demo', identifier='itemss'), _ReferenceKey(database='test_db', schema='demo', identifier='issue'), _ReferenceKey(database='test_db', schema='demo', identifier='json_response'), _ReferenceKey(database='test_db', schema='demo', identifier='json_response_01190128'), _ReferenceKey(database='test_db', schema='demo', identifier='json_response_01350004'), _ReferenceKey(database='test_db', schema='demo', identifier='json_response_01780001'), _ReferenceKey(database='test_db', schema='demo', identifier='json_response_1270118'), _ReferenceKey(database='test_db', schema='demo', identifier='json_response_1270119'), _ReferenceKey(database='test_db', schema='demo', identifier='json_response_1320118'), _ReferenceKey(database='test_db', schema='demo', identifier='json_response_1350004'), _ReferenceKey(database='test_db', schema='demo', identifier='json_response_1350005'), _ReferenceKey(database='test_db', schema='demo', identifier='json_response_1350006'), _ReferenceKey(database='test_db', schema='demo', identifier='json_response_1350007'), _ReferenceKey(database='test_db', schema='demo', identifier='json_response_1363412'), _ReferenceKey(database='test_db', schema='demo', identifier='json_response_1780001'), _ReferenceKey(database='test_db', schema='demo', identifier='json_response_206380240'), _ReferenceKey(database='test_db', schema='demo', identifier='json_response_206380242'), _ReferenceKey(database='test_db', schema='demo', identifier='json_response_206380246'), _ReferenceKey(database='test_db', schema='demo', identifier='json_response_206380250'), _ReferenceKey(database='test_db', schema='demo', identifier='json_response_206380251'), _ReferenceKey(database='test_db', schema='demo', identifier='json_response_206380254'), _ReferenceKey(database='test_db', schema='demo', identifier='json_response_206380257'), _ReferenceKey(database='test_db', schema='demo', identifier='json_response_206380260'), _ReferenceKey(database='test_db', schema='demo', identifier='json_response_206380263'), _ReferenceKey(database='test_db', schema='demo', identifier='json_response_206380264'), _ReferenceKey(database='test_db', schema='demo', identifier='json_response_206380269'), _ReferenceKey(database='test_db', schema='demo', identifier='json_response_206380270'), _ReferenceKey(database='test_db', schema='demo', identifier='json_response_206380275'), _ReferenceKey(database='test_db', schema='demo', identifier='json_response_206380278'), _ReferenceKey(database='test_db', schema='demo', identifier='json_response_206380282'), _ReferenceKey(database='test_db', schema='demo', identifier='json_response_206380283'), _ReferenceKey(database='test_db', schema='demo', identifier='json_response_206380284'), _ReferenceKey(database='test_db', schema='demo', identifier='json_response_206380291'), _ReferenceKey(database='test_db', schema='demo', identifier='json_response_206380296'), _ReferenceKey(database='test_db', schema='demo', identifier='json_response_206380299'), _ReferenceKey(database='test_db', schema='demo', identifier='json_response_206380301'), _ReferenceKey(database='test_db', schema='demo', identifier='json_response_206380304'), _ReferenceKey(database='test_db', schema='demo', identifier='json_response_206380312'), _ReferenceKey(database='test_db', schema='demo', identifier='json_response_206380314'), _ReferenceKey(database='test_db', schema='demo', identifier='json_response_206380323'), _ReferenceKey(database='test_db', schema='demo', identifier='json_response_206380327'), _ReferenceKey(database='test_db', schema='demo', identifier='json_response_206380338'), _ReferenceKey(database='test_db', schema='demo', identifier='json_response_206380355'), _ReferenceKey(database='test_db', schema='demo', identifier='json_response_206380357'), _ReferenceKey(database='test_db', schema='demo', identifier='json_response_227200001'), _ReferenceKey(database='test_db', schema='demo', identifier='json_response_2500075'), _ReferenceKey(database='test_db', schema='demo', identifier='json_response_output_01190128'), _ReferenceKey(database='test_db', schema='demo', identifier='json_response_output_01350004'), _ReferenceKey(database='test_db', schema='demo', identifier='json_response_output_customer'), _ReferenceKey(database='test_db', schema='demo', identifier='json_response_output_items'), _ReferenceKey(database='test_db', schema='demo', identifier='json_response_quotes'), _ReferenceKey(database='test_db', schema='demo', identifier='json_respose_2'), _ReferenceKey(database='test_db', schema='demo', identifier='kafka_failure_quotes'), _ReferenceKey(database='test_db', schema='demo', identifier='kafka_quotes_trails'), _ReferenceKey(database='test_db', schema='demo', identifier='kafka_resp'), _ReferenceKey(database='test_db', schema='demo', identifier='kafka_response'), _ReferenceKey(database='test_db', schema='demo', identifier='kafka_response_querycomponent'), _ReferenceKey(database='test_db', schema='demo', identifier='kafka_table'), _ReferenceKey(database='test_db', schema='demo', identifier='kafk_response_api'), _ReferenceKey(database='test_db', schema='demo', identifier='kaf_r'), _ReferenceKey(database='test_db', schema='demo', identifier='leads_data'), _ReferenceKey(database='test_db', schema='demo', identifier='leads'), _ReferenceKey(database='test_db', schema='demo', identifier='metadata_config_table'), _ReferenceKey(database='test_db', schema='demo', identifier='milestones'), _ReferenceKey(database='test_db', schema='demo', identifier='mkt'), _ReferenceKey(database='test_db', schema='demo', identifier='mkt_target_created_arearegion'), _ReferenceKey(database='test_db', schema='demo', identifier='model'), _ReferenceKey(database='test_db', schema='demo', identifier='model_base'), _ReferenceKey(database='test_db', schema='demo', identifier='model_base_table'), _ReferenceKey(database='test_db', schema='demo', identifier='model_service'), _ReferenceKey(database='test_db', schema='demo', identifier='model_service_table'), _ReferenceKey(database='test_db', schema='demo', identifier='model_table'), _ReferenceKey(database='test_db', schema='demo', identifier='mta_final_data_cohort1'), _ReferenceKey(database='test_db', schema='demo', identifier='mta_final_data_cohort2'), _ReferenceKey(database='test_db', schema='demo', identifier='my_first_dbt_model'), _ReferenceKey(database='test_db', schema='demo', identifier='my_second_dbt_model'), _ReferenceKey(database='test_db', schema='demo', identifier='marketo_email'), _ReferenceKey(database='test_db', schema='demo', identifier='open_mail'), _ReferenceKey(database='test_db', schema='demo', identifier='pls_sales_territory_security'), _ReferenceKey(database='test_db', schema='demo', identifier='quotenumbers'), _ReferenceKey(database='test_db', schema='demo', identifier='quotes'), _ReferenceKey(database='test_db', schema='demo', identifier='quotes_string'), _ReferenceKey(database='test_db', schema='demo', identifier='quote_line_items'), _ReferenceKey(database='test_db', schema='demo', identifier='quote_process_log'), _ReferenceKey(database='test_db', schema='demo', identifier='rds_bu_ebc_activity'), _ReferenceKey(database='test_db', schema='demo', identifier='rds_sales_territory_security_ne'), _ReferenceKey(database='test_db', schema='demo', identifier='recon_invoice_schedule'), _ReferenceKey(database='test_db', schema='demo', identifier='recon_quotes'), _ReferenceKey(database='test_db', schema='demo', identifier='recon_quote_line_items'), _ReferenceKey(database='test_db', schema='demo', identifier='rpt_fixeddataplusquota_rt'), _ReferenceKey(database='test_db', schema='demo', identifier='rpt_headcount_summary'), _ReferenceKey(database='test_db', schema='demo', identifier='rpt_pipeline_coverage'), _ReferenceKey(database='test_db', schema='demo', identifier='rpt_unifiedss_dim_territorydate'), _ReferenceKey(database='test_db', schema='demo', identifier='rpt_unifiedss_fact_sales_combined'), _ReferenceKey(database='test_db', schema='demo', identifier='sales_data'), _ReferenceKey(database='test_db', schema='demo', identifier='sales_lead'), _ReferenceKey(database='test_db', schema='demo', identifier='sales_territory_security_ne'), _ReferenceKey(database='test_db', schema='demo', identifier='sap_hana_quote_numbers'), _ReferenceKey(database='test_db', schema='demo', identifier='search_tweets_incr'), _ReferenceKey(database='test_db', schema='demo', identifier='snf_campaign_conversation_salesplay_goals'), _ReferenceKey(database='test_db', schema='demo', identifier='snf_mkt_ampaign_conversation_salesplay_goals'), _ReferenceKey(database='test_db', schema='demo', identifier='snf_mkt_campaign_conversation_salesplay_funnel_goals'), _ReferenceKey(database='test_db', schema='demo', identifier='snf_mkt_campaign_conversation_salesplay_goals'), _ReferenceKey(database='test_db', schema='demo', identifier='snf_mkt_dimension_mapping'), _ReferenceKey(database='test_db', schema='demo', identifier='src_config_hana'), _ReferenceKey(database='test_db', schema='demo', identifier='src_config_sf_load'), _ReferenceKey(database='test_db', schema='demo', identifier='src_database_config'), _ReferenceKey(database='test_db', schema='demo', identifier='src_file_config'), _ReferenceKey(database='test_db', schema='demo', identifier='stg_bookings_universe'), _ReferenceKey(database='test_db', schema='demo', identifier='stg_bu_ebc_activity'), _ReferenceKey(database='test_db', schema='demo', identifier='stg_bu_ebc_activity_incr'), _ReferenceKey(database='test_db', schema='demo', identifier='stg_campaign_conversation_salesplay_goals'), _ReferenceKey(database='test_db', schema='demo', identifier='stg_customers'), _ReferenceKey(database='test_db', schema='demo', identifier='stg_customer_story_annual_targets_bu'), _ReferenceKey(database='test_db', schema='demo', identifier='stg_c_b_lu_cntry_tier_map'), _ReferenceKey(database='test_db', schema='demo', identifier='stg_c_b_lu_hg_vendor_view'), _ReferenceKey(database='test_db', schema='demo', identifier='stg_c_b_rel_pty_hg_account'), _ReferenceKey(database='test_db', schema='demo', identifier='stg_d_fpa_bookings_product'), _ReferenceKey(database='test_db', schema='demo', identifier='stg_d_fpa_tacv_forecast'), _ReferenceKey(database='test_db', schema='demo', identifier='stg_d_fpa_tcustomer_flags'), _ReferenceKey(database='test_db', schema='demo', identifier='stg_d_fpa_treporting_quarter_flag'), _ReferenceKey(database='test_db', schema='demo', identifier='stg_d_fpa_tacv_forecast_bu'), _ReferenceKey(database='test_db', schema='demo', identifier='stg_em_customer_base'), _ReferenceKey(database='test_db', schema='demo', identifier='stg_em_fixeddataplusquota_rt'), _ReferenceKey(database='test_db', schema='demo', identifier='stg_em_licensing_decoder'), _ReferenceKey(database='test_db', schema='demo', identifier='stg_em_mkt_fspnewlogo'), _ReferenceKey(database='test_db', schema='demo', identifier='stg_em_opportunity_partner_deal'), _ReferenceKey(database='test_db', schema='demo', identifier='stg_em_sales_account'), _ReferenceKey(database='test_db', schema='demo', identifier='stg_em_sales_account_rt'), _ReferenceKey(database='test_db', schema='demo', identifier='stg_em_sales_opportunity_extended_rt'), _ReferenceKey(database='test_db', schema='demo', identifier='stg_em_sales_product_quota_rt'), _ReferenceKey(database='test_db', schema='demo', identifier='stg_ff_quantity_adj_mapping'), _ReferenceKey(database='test_db', schema='demo', identifier='stg_filloutform'), _ReferenceKey(database='test_db', schema='demo', identifier='stg_fill_out_form'), _ReferenceKey(database='test_db', schema='demo', identifier='stg_fpa_sales_renewal_field_quota'), _ReferenceKey(database='test_db', schema='demo', identifier='stg_invoice_schedule'), _ReferenceKey(database='test_db', schema='demo', identifier='stg_mkt_bu_daily_factor'), _ReferenceKey(database='test_db', schema='demo', identifier='stg_mkt_campaign_conversation_salesplay_funnel_goals'), _ReferenceKey(database='test_db', schema='demo', identifier='stg_mkt_dimension_mapping'), _ReferenceKey(database='test_db', schema='demo', identifier='stg_mkt_geo_targetaccounts'), _ReferenceKey(database='test_db', schema='demo', identifier='stg_mkt_gsd_pipeline_goals'), _ReferenceKey(database='test_db', schema='demo', identifier='stg_mkt_hot_pros_contact_coverage'), _ReferenceKey(database='test_db', schema='demo', identifier='stg_mkt_industry_segment_goals'), _ReferenceKey(database='test_db', schema='demo', identifier='stg_mkt_opty_exclusionlist'), _ReferenceKey(database='test_db', schema='demo', identifier='stg_mkt_target_created_arearegion'), _ReferenceKey(database='test_db', schema='demo', identifier='stg_mkt_target_event'), _ReferenceKey(database='test_db', schema='demo', identifier='stg_open_mail'), _ReferenceKey(database='test_db', schema='demo', identifier='stg_pls_sales_territory_security'), _ReferenceKey(database='test_db', schema='demo', identifier='stg_quotes'), _ReferenceKey(database='test_db', schema='demo', identifier='stg_quote_line_items'), _ReferenceKey(database='test_db', schema='demo', identifier='stg_rpt_fixeddataplusquota_rt'), _ReferenceKey(database='test_db', schema='demo', identifier='stg_rpt_pipeline_coverage'), _ReferenceKey(database='test_db', schema='demo', identifier='stg_sales_territory_security_ne'), _ReferenceKey(database='test_db', schema='demo', identifier='stg_search_tweets_incr'), _ReferenceKey(database='test_db', schema='demo', identifier='stg_test'), _ReferenceKey(database='test_db', schema='demo', identifier='success_etl_log'), _ReferenceKey(database='test_db', schema='demo', identifier='t9'), _ReferenceKey(database='test_db', schema='demo', identifier='t91'), _ReferenceKey(database='test_db', schema='demo', identifier='t92'), _ReferenceKey(database='test_db', schema='demo', identifier='t93'), _ReferenceKey(database='test_db', schema='demo', identifier='t94_m'), _ReferenceKey(database='test_db', schema='demo', identifier='table_dna_cr_mapping'), _ReferenceKey(database='test_db', schema='demo', identifier='test_cpu_mat_em_cyr_opptyweeklysnapshot_rt'), _ReferenceKey(database='test_db', schema='demo', identifier='test_dest'), _ReferenceKey(database='test_db', schema='demo', identifier='test_json'), _ReferenceKey(database='test_db', schema='demo', identifier='test_rpt_pipeline_coverage'), _ReferenceKey(database='test_db', schema='demo', identifier='test_source'), _ReferenceKey(database='test_db', schema='demo', identifier='tst1_kb'), _ReferenceKey(database='test_db', schema='demo', identifier='test_emp'), _ReferenceKey(database='test_db', schema='demo', identifier='test_emp_small'), _ReferenceKey(database='test_db', schema='demo', identifier='test_table'), _ReferenceKey(database='test_db', schema='demo', identifier='user'), _ReferenceKey(database='test_db', schema='demo', identifier='user_info_chaitra.gn1@gmail.com'), _ReferenceKey(database='test_db', schema='demo', identifier='user_info_dan.gripping@gmail.com'), _ReferenceKey(database='test_db', schema='demo', identifier='user_info_irene.stoeger@avocodo.com'), _ReferenceKey(database='test_db', schema='demo', identifier='user_info_mou.sneogi@gmail.com'), _ReferenceKey(database='test_db', schema='demo', identifier='user_info_nilesh.bharambe@plat4mation.com'), _ReferenceKey(database='test_db', schema='demo', identifier='user_info_plavanya2807@gmail.com'), _ReferenceKey(database='test_db', schema='demo', identifier='user_mail_list'), _ReferenceKey(database='test_db', schema='demo', identifier='user_response'), _ReferenceKey(database='test_db', schema='demo', identifier='user_response_${id}'), _ReferenceKey(database='test_db', schema='demo', identifier='user_response_abccom123        '), _ReferenceKey(database='test_db', schema='demo', identifier='user_response_acostabhgmailcom                  '), _ReferenceKey(database='test_db', schema='demo', identifier='user_response_alisarfrazoutlookcom                       '), _ReferenceKey(database='test_db', schema='demo', identifier='user_response_andreasweberagweberde                        '), _ReferenceKey(database='test_db', schema='demo', identifier='user_response_coxkmgmailcom14               '), _ReferenceKey(database='test_db', schema='demo', identifier='user_response_csegmailcom180030012             '), _ReferenceKey(database='test_db', schema='demo', identifier='user_response_csegmailcom180030023             '), _ReferenceKey(database='test_db', schema='demo', identifier='user_response_deepakdeenagmailcom           26          '), _ReferenceKey(database='test_db', schema='demo', identifier='user_response_deepakyadavgmailcom0308                     '), _ReferenceKey(database='test_db', schema='demo', identifier='user_response_hagmailcom15 51 0566          '), _ReferenceKey(database='test_db', schema='demo', identifier='user_response_jafgmailcom15 41 05 6          '), _ReferenceKey(database='test_db', schema='demo', identifier='user_response_kluniversityin170030343                '), _ReferenceKey(database='test_db', schema='demo', identifier='user_response_koudaigmailcom0320                '), _ReferenceKey(database='test_db', schema='demo', identifier='user_response_kurkuregmailcom008                 '), _ReferenceKey(database='test_db', schema='demo', identifier='user_response_mailmegmailcom1415                '), _ReferenceKey(database='test_db', schema='demo', identifier='user_response_mderhammerkwiktripcom                       '), _ReferenceKey(database='test_db', schema='demo', identifier='user_response_niclasvonwelczeckaccenturecom                                 '), _ReferenceKey(database='test_db', schema='demo', identifier='user_response_prudhviyerriboyinagmailcom                             '), _ReferenceKey(database='test_db', schema='demo', identifier='user_response_qqcom1106112856       '), _ReferenceKey(database='test_db', schema='demo', identifier='user_response_qqcom1404942787       '), _ReferenceKey(database='test_db', schema='demo', identifier='user_response_qqcom1755786845       '), _ReferenceKey(database='test_db', schema='demo', identifier='user_response_rameshgmailcom1243                '), _ReferenceKey(database='test_db', schema='demo', identifier='user_response_rjsgmailcom00   0          '), _ReferenceKey(database='test_db', schema='demo', identifier='user_response_sashigmailcom      048          '), _ReferenceKey(database='test_db', schema='demo', identifier='user_response_singhdeepaligmailcom14                       '), _ReferenceKey(database='test_db', schema='demo', identifier='user_response_swethaagmailcom15                 '), _ReferenceKey(database='test_db', schema='demo', identifier='user_response_swethajrgmailcom01                  '), _ReferenceKey(database='test_db', schema='demo', identifier='user_response_timothycasecognizantcom                          '), _ReferenceKey(database='test_db', schema='demo', identifier='user_response_vinayakgmailcom114                 '), _ReferenceKey(database='test_db', schema='demo', identifier='vw_emp_colcasetst'), _ReferenceKey(database='test_db', schema='demo', identifier='vw_emp_colcasetst1'), _ReferenceKey(database='test_db', schema='demo', identifier='vw_emp_test1'), _ReferenceKey(database='test_db', schema='demo', identifier='vw_emp_test2'), _ReferenceKey(database='test_db', schema='demo', identifier='v_dbt_model1'), _ReferenceKey(database='test_db', schema='demo', identifier='v_dbt_model13'), _ReferenceKey(database='test_db', schema='demo', identifier='all_json_response'), _ReferenceKey(database='test_db', schema='demo', identifier='all_jsons'), _ReferenceKey(database='test_db', schema='demo', identifier='au'), _ReferenceKey(database='test_db', schema='demo', identifier='audit'), _ReferenceKey(database='test_db', schema='demo', identifier='audit_table'), _ReferenceKey(database='test_db', schema='demo', identifier='click_mail4'), _ReferenceKey(database='test_db', schema='demo', identifier='dbt_model1_dbt_tmp'), _ReferenceKey(database='test_db', schema='demo', identifier='ff_stage_table'), _ReferenceKey(database='test_db', schema='demo', identifier='json_response'), _ReferenceKey(database='test_db', schema='demo', identifier='json_responsee3'), _ReferenceKey(database='test_db', schema='demo', identifier='mtln_airport_data'), _ReferenceKey(database='test_db', schema='demo', identifier='quotes'), _ReferenceKey(database='test_db', schema='demo', identifier='src'), _ReferenceKey(database='test_db', schema='demo', identifier='stg_filloutform_paginationtest'), _ReferenceKey(database='test_db', schema='demo', identifier='success_etl_log'), _ReferenceKey(database='test_db', schema='demo', identifier='test'), _ReferenceKey(database='test_db', schema='demo', identifier='test_json'), _ReferenceKey(database='test_db', schema='demo', identifier='test_table'), _ReferenceKey(database='test_db', schema='demo', identifier='user_info'), _ReferenceKey(database='test_db', schema='demo', identifier='user_info_irene.stoeger@avocodo.com'), _ReferenceKey(database='test_db', schema='demo', identifier='user_info_nilesh.bharambe@plat4mation.com'), _ReferenceKey(database='test_db', schema='demo', identifier='users_data'), _ReferenceKey(database='test_db', schema='demo', identifier='users_response')]
+05:15:31.014486 [debug] [Thread-1  ]: current_relation "TEST_DB"."DEMO"."DBT_MODEL1"
+05:15:31.015013 [debug] [Thread-1  ]: backup_relation TEST_DB.DEMO.DBT_MODEL1_DBT_BACKUP_20220609104531014880
+05:15:31.015610 [debug] [Thread-1  ]: target_relation TEST_DB.DEMO.DBT_MODEL1
+05:15:31.015777 [debug] [Thread-1  ]: tmp_relation TEST_DB.DEMO.DBT_MODEL1_DBT_TMP
+05:15:31.016151 [debug] [Thread-1  ]: Cloning existing relation "TEST_DB"."DEMO"."DBT_MODEL1" as a backup with name TEST_DB.DEMO.DBT_MODEL1_DBT_BACKUP_20220609104531014880
+05:15:31.016670 [debug] [Thread-1  ]: Using snowflake connection "model.my_dbt_project.TEST_DB_DEMO_DBT_MODEL1"
+05:15:31.016810 [debug] [Thread-1  ]: On model.my_dbt_project.TEST_DB_DEMO_DBT_MODEL1: /* {"app": "dbt", "dbt_version": "1.1.0", "profile_name": "my_dbt_project", "target_name": "dev", "node_id": "model.my_dbt_project.TEST_DB_DEMO_DBT_MODEL1"} */
+CREATE OR REPLACE TABLE TEST_DB.DEMO.DBT_MODEL1_DBT_BACKUP_20220609104531014880
+            CLONE "TEST_DB"."DEMO"."DBT_MODEL1"
+05:15:31.544968 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.53 seconds
+05:15:31.546297 [debug] [Thread-1  ]: Tmp sql CREATE OR REPLACE TABLE TEST_DB.DEMO.DBT_MODEL1_DBT_TMP (
+	FIRST_NAME VARCHAR(100),
+	LAST_NAME VARCHAR(100),
+	EMAIL VARCHAR(100),
+	STREETADDRESS VARCHAR(150),
+	CITY VARCHAR(40)
+	
+)
+05:15:31.546634 [debug] [Thread-1  ]: Creating table TEST_DB.DEMO.DBT_MODEL1_DBT_TMP
+05:15:31.546918 [debug] [Thread-1  ]: Writing runtime SQL for node "model.my_dbt_project.TEST_DB_DEMO_DBT_MODEL1"
+05:15:31.548365 [debug] [Thread-1  ]: Using snowflake connection "model.my_dbt_project.TEST_DB_DEMO_DBT_MODEL1"
+05:15:31.548545 [debug] [Thread-1  ]: On model.my_dbt_project.TEST_DB_DEMO_DBT_MODEL1: /* {"app": "dbt", "dbt_version": "1.1.0", "profile_name": "my_dbt_project", "target_name": "dev", "node_id": "model.my_dbt_project.TEST_DB_DEMO_DBT_MODEL1"} */
+
+            
+            
+
+    CREATE OR REPLACE TABLE TEST_DB.DEMO.DBT_MODEL1_DBT_TMP (
+	FIRST_NAME VARCHAR(100),
+	LAST_NAME VARCHAR(100),
+	EMAIL VARCHAR(100),
+	STREETADDRESS VARCHAR(150),
+	CITY VARCHAR(40)
+	
+)
+    ;
+05:15:31.970012 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.42 seconds
+05:15:31.973253 [debug] [Thread-1  ]: Using snowflake connection "model.my_dbt_project.TEST_DB_DEMO_DBT_MODEL1"
+05:15:31.973410 [debug] [Thread-1  ]: On model.my_dbt_project.TEST_DB_DEMO_DBT_MODEL1: /* {"app": "dbt", "dbt_version": "1.1.0", "profile_name": "my_dbt_project", "target_name": "dev", "node_id": "model.my_dbt_project.TEST_DB_DEMO_DBT_MODEL1"} */
+
+    describe table TEST_DB.DEMO.DBT_MODEL1_DBT_TMP
+05:15:32.331221 [debug] [Thread-1  ]: SQL status: SUCCESS 5 in 0.36 seconds
+05:15:32.334439 [debug] [Thread-1  ]: Using snowflake connection "model.my_dbt_project.TEST_DB_DEMO_DBT_MODEL1"
+05:15:32.334606 [debug] [Thread-1  ]: On model.my_dbt_project.TEST_DB_DEMO_DBT_MODEL1: /* {"app": "dbt", "dbt_version": "1.1.0", "profile_name": "my_dbt_project", "target_name": "dev", "node_id": "model.my_dbt_project.TEST_DB_DEMO_DBT_MODEL1"} */
+
+    describe table "TEST_DB"."DEMO"."DBT_MODEL1"
+05:15:32.683509 [debug] [Thread-1  ]: SQL status: SUCCESS 5 in 0.35 seconds
+05:15:32.686783 [debug] [Thread-1  ]: Using snowflake connection "model.my_dbt_project.TEST_DB_DEMO_DBT_MODEL1"
+05:15:32.686939 [debug] [Thread-1  ]: On model.my_dbt_project.TEST_DB_DEMO_DBT_MODEL1: /* {"app": "dbt", "dbt_version": "1.1.0", "profile_name": "my_dbt_project", "target_name": "dev", "node_id": "model.my_dbt_project.TEST_DB_DEMO_DBT_MODEL1"} */
+
+    describe table "TEST_DB"."DEMO"."DBT_MODEL1"
+05:15:33.021174 [debug] [Thread-1  ]: SQL status: SUCCESS 5 in 0.33 seconds
+05:15:33.025583 [debug] [Thread-1  ]: Using snowflake connection "model.my_dbt_project.TEST_DB_DEMO_DBT_MODEL1"
+05:15:33.025761 [debug] [Thread-1  ]: On model.my_dbt_project.TEST_DB_DEMO_DBT_MODEL1: /* {"app": "dbt", "dbt_version": "1.1.0", "profile_name": "my_dbt_project", "target_name": "dev", "node_id": "model.my_dbt_project.TEST_DB_DEMO_DBT_MODEL1"} */
+
+    describe table TEST_DB.DEMO.DBT_MODEL1_DBT_TMP
+05:15:33.468424 [debug] [Thread-1  ]: SQL status: SUCCESS 5 in 0.44 seconds
+05:15:33.472834 [debug] [Thread-1  ]: Using snowflake connection "model.my_dbt_project.TEST_DB_DEMO_DBT_MODEL1"
+05:15:33.473012 [debug] [Thread-1  ]: On model.my_dbt_project.TEST_DB_DEMO_DBT_MODEL1: /* {"app": "dbt", "dbt_version": "1.1.0", "profile_name": "my_dbt_project", "target_name": "dev", "node_id": "model.my_dbt_project.TEST_DB_DEMO_DBT_MODEL1"} */
+
+    describe table TEST_DB.DEMO.DBT_MODEL1_DBT_TMP
+05:15:33.806279 [debug] [Thread-1  ]: SQL status: SUCCESS 5 in 0.33 seconds
+05:15:33.811198 [debug] [Thread-1  ]: Using snowflake connection "model.my_dbt_project.TEST_DB_DEMO_DBT_MODEL1"
+05:15:33.811375 [debug] [Thread-1  ]: On model.my_dbt_project.TEST_DB_DEMO_DBT_MODEL1: /* {"app": "dbt", "dbt_version": "1.1.0", "profile_name": "my_dbt_project", "target_name": "dev", "node_id": "model.my_dbt_project.TEST_DB_DEMO_DBT_MODEL1"} */
+
+    describe table "TEST_DB"."DEMO"."DBT_MODEL1"
+05:15:34.128999 [debug] [Thread-1  ]: SQL status: SUCCESS 5 in 0.32 seconds
+05:15:34.133271 [debug] [Thread-1  ]: Using snowflake connection "model.my_dbt_project.TEST_DB_DEMO_DBT_MODEL1"
+05:15:34.133450 [debug] [Thread-1  ]: On model.my_dbt_project.TEST_DB_DEMO_DBT_MODEL1: /* {"app": "dbt", "dbt_version": "1.1.0", "profile_name": "my_dbt_project", "target_name": "dev", "node_id": "model.my_dbt_project.TEST_DB_DEMO_DBT_MODEL1"} */
+drop table if exists TEST_DB.DEMO.DBT_MODEL1_DBT_TMP cascade
+05:15:34.557517 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.42 seconds
+05:15:34.559530 [debug] [Thread-1  ]: finished collecting timing info
+05:15:34.559806 [debug] [Thread-1  ]: On model.my_dbt_project.TEST_DB_DEMO_DBT_MODEL1: Close
+05:15:35.114610 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '0740af1b-f460-40b1-a198-01f4318d5e3f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1141d97c0>]}
+05:15:35.115235 [info ] [Thread-1  ]: 2 of 3 OK created persistent_table model ECOMM.TEST_DB_DEMO_DBT_MODEL1 ......... [[32mSUCCESS 1[0m in 8.34s]
+05:15:35.115934 [debug] [Thread-1  ]: Finished running node model.my_dbt_project.TEST_DB_DEMO_DBT_MODEL1
+05:15:35.116250 [debug] [Thread-1  ]: Began running node model.my_dbt_project.TEST_DB_DEMO_DBT_MODEL13
+05:15:35.116631 [info ] [Thread-1  ]: 3 of 3 START persistent_table model ECOMM.TEST_DB_DEMO_DBT_MODEL13 ............. [RUN]
+05:15:35.117188 [debug] [Thread-1  ]: Acquiring new snowflake connection "model.my_dbt_project.TEST_DB_DEMO_DBT_MODEL13"
+05:15:35.117587 [debug] [Thread-1  ]: Began compiling node model.my_dbt_project.TEST_DB_DEMO_DBT_MODEL13
+05:15:35.117860 [debug] [Thread-1  ]: Compiling model.my_dbt_project.TEST_DB_DEMO_DBT_MODEL13
+05:15:35.120817 [debug] [Thread-1  ]: Writing injected SQL for node "model.my_dbt_project.TEST_DB_DEMO_DBT_MODEL13"
+05:15:35.121830 [debug] [Thread-1  ]: finished collecting timing info
+05:15:35.122042 [debug] [Thread-1  ]: Began executing node model.my_dbt_project.TEST_DB_DEMO_DBT_MODEL13
+05:15:35.123533 [debug] [Thread-1  ]: DatabaseName TEST_DBSchemaName DEMOidentifier DBT_MODEL13.
+05:15:35.123811 [debug] [Thread-1  ]: current_relation None
+05:15:35.124176 [debug] [Thread-1  ]: backup_relation TEST_DB.DEMO.DBT_MODEL13_DBT_BACKUP_20220609104535124055
+05:15:35.124822 [debug] [Thread-1  ]: target_relation TEST_DB.DEMO.DBT_MODEL13
+05:15:35.125012 [debug] [Thread-1  ]: tmp_relation TEST_DB.DEMO.DBT_MODEL13_DBT_TMP
+05:15:35.125483 [debug] [Thread-1  ]: Creating table TEST_DB.DEMO.DBT_MODEL13
+05:15:35.125659 [debug] [Thread-1  ]: Writing runtime SQL for node "model.my_dbt_project.TEST_DB_DEMO_DBT_MODEL13"
+05:15:35.126652 [debug] [Thread-1  ]: Using snowflake connection "model.my_dbt_project.TEST_DB_DEMO_DBT_MODEL13"
+05:15:35.126797 [debug] [Thread-1  ]: On model.my_dbt_project.TEST_DB_DEMO_DBT_MODEL13: /* {"app": "dbt", "dbt_version": "1.1.0", "profile_name": "my_dbt_project", "target_name": "dev", "node_id": "model.my_dbt_project.TEST_DB_DEMO_DBT_MODEL13"} */
+
+
+    CREATE OR REPLACE TABLE TEST_DB.DEMO.DBT_MODEL13 (
+	FIRST_NAME VARCHAR(100),
+	LAST_NAME VARCHAR(100),
+	EMAIL VARCHAR(100),
+	STREETADDRESS VARCHAR(150),
+	CITY VARCHAR(10)
+)
+    ;
+05:15:35.126933 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+05:15:39.436643 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 4.31 seconds
+05:15:39.441670 [debug] [Thread-1  ]: finished collecting timing info
+05:15:39.442019 [debug] [Thread-1  ]: On model.my_dbt_project.TEST_DB_DEMO_DBT_MODEL13: Close
+05:15:39.983045 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '0740af1b-f460-40b1-a198-01f4318d5e3f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1141b53d0>]}
+05:15:39.983724 [info ] [Thread-1  ]: 3 of 3 OK created persistent_table model ECOMM.TEST_DB_DEMO_DBT_MODEL13 ........ [[32mSUCCESS 1[0m in 4.87s]
+05:15:39.984500 [debug] [Thread-1  ]: Finished running node model.my_dbt_project.TEST_DB_DEMO_DBT_MODEL13
+05:15:39.986371 [debug] [MainThread]: Acquiring new snowflake connection "master"
+05:15:39.986821 [info ] [MainThread]: 
+05:15:39.987151 [info ] [MainThread]: Finished running 3 persistent_table models in 35.51s.
+05:15:39.987436 [debug] [MainThread]: Connection 'master' was properly closed.
+05:15:39.987587 [debug] [MainThread]: Connection 'model.my_dbt_project.TEST_DB_DEMO_DBT_MODEL13' was properly closed.
+05:15:39.994099 [info ] [MainThread]: 
+05:15:39.994394 [info ] [MainThread]: [32mCompleted successfully[0m
+05:15:39.994678 [info ] [MainThread]: 
+05:15:39.994912 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 TOTAL=3
+05:15:39.995273 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11262ea90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11364a280>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11383ad60>]}
+
+
+============================== 2022-06-09 05:44:57.053347 | ea33ed8d-e93d-4a9a-9684-3394870b914d ==============================
+05:44:57.053387 [info ] [MainThread]: Running with dbt=1.1.0
+05:44:57.055033 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/srikanth.bidhaniya/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'select': ['others'], 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+05:44:57.055301 [debug] [MainThread]: Tracking: tracking
+05:44:57.055866 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108f1e5b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108f1e610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108f1e670>]}
+05:44:57.129251 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+05:44:57.129464 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+05:44:57.136531 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'ea33ed8d-e93d-4a9a-9684-3394870b914d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108fca0a0>]}
+05:44:57.143837 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'ea33ed8d-e93d-4a9a-9684-3394870b914d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108f6ad00>]}
+05:44:57.144188 [info ] [MainThread]: Found 6 models, 0 tests, 0 snapshots, 0 analyses, 193 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+05:44:57.144464 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ea33ed8d-e93d-4a9a-9684-3394870b914d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108f6aee0>]}
+05:44:57.145903 [info ] [MainThread]: 
+05:44:57.146370 [debug] [MainThread]: Acquiring new snowflake connection "master"
+05:44:57.147242 [debug] [ThreadPool]: Acquiring new snowflake connection "list_TEST_DB"
+05:44:57.163034 [debug] [ThreadPool]: Using snowflake connection "list_TEST_DB"
+05:44:57.163263 [debug] [ThreadPool]: On list_TEST_DB: /* {"app": "dbt", "dbt_version": "1.1.0", "profile_name": "my_dbt_project", "target_name": "dev", "connection_name": "list_TEST_DB"} */
+
+    show terse schemas in database TEST_DB
+    limit 10000
+05:44:57.163414 [debug] [ThreadPool]: Opening a new connection, currently in state init
+05:45:05.119247 [debug] [ThreadPool]: SQL status: SUCCESS 39 in 7.96 seconds
+05:45:05.123036 [debug] [ThreadPool]: On list_TEST_DB: Close
+05:45:05.691796 [debug] [ThreadPool]: Acquiring new snowflake connection "list_TEST_DB_ECOMM"
+05:45:05.699557 [debug] [ThreadPool]: Using snowflake connection "list_TEST_DB_ECOMM"
+05:45:05.699741 [debug] [ThreadPool]: On list_TEST_DB_ECOMM: /* {"app": "dbt", "dbt_version": "1.1.0", "profile_name": "my_dbt_project", "target_name": "dev", "connection_name": "list_TEST_DB_ECOMM"} */
+
+    show terse objects in TEST_DB.ECOMM
+05:45:05.699901 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+05:45:10.447589 [debug] [ThreadPool]: SQL status: SUCCESS 8 in 4.75 seconds
+05:45:10.451144 [debug] [ThreadPool]: On list_TEST_DB_ECOMM: Close
+05:45:10.997914 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ea33ed8d-e93d-4a9a-9684-3394870b914d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1090092b0>]}
+05:45:10.998531 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+05:45:10.998851 [info ] [MainThread]: 
+05:45:11.005137 [debug] [Thread-1  ]: Began running node model.my_dbt_project.1_V_DBT_MODEL11
+05:45:11.005535 [info ] [Thread-1  ]: 1 of 3 START procedure_definition model ECOMM.1_V_DBT_MODEL11 .................. [RUN]
+05:45:11.006011 [debug] [Thread-1  ]: Acquiring new snowflake connection "model.my_dbt_project.1_V_DBT_MODEL11"
+05:45:11.006170 [debug] [Thread-1  ]: Began compiling node model.my_dbt_project.1_V_DBT_MODEL11
+05:45:11.006377 [debug] [Thread-1  ]: Compiling model.my_dbt_project.1_V_DBT_MODEL11
+05:45:11.009541 [debug] [Thread-1  ]: Writing injected SQL for node "model.my_dbt_project.1_V_DBT_MODEL11"
+05:45:11.010595 [debug] [Thread-1  ]: finished collecting timing info
+05:45:11.010800 [debug] [Thread-1  ]: Began executing node model.my_dbt_project.1_V_DBT_MODEL11
+05:45:11.022738 [debug] [Thread-1  ]: Writing runtime SQL for node "model.my_dbt_project.1_V_DBT_MODEL11"
+05:45:11.023728 [debug] [Thread-1  ]: Using snowflake connection "model.my_dbt_project.1_V_DBT_MODEL11"
+05:45:11.023857 [debug] [Thread-1  ]: On model.my_dbt_project.1_V_DBT_MODEL11: /* {"app": "dbt", "dbt_version": "1.1.0", "profile_name": "my_dbt_project", "target_name": "dev", "node_id": "model.my_dbt_project.1_V_DBT_MODEL11"} */
+CREATE OR REPLACE VIEW TEST_DB.DEMO.V_DBT_MODEL13
+AS 
+SELECT * 
+FROM TEST_DB.DEMO.DBT_MODEL13
+05:45:11.023970 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+05:45:16.097646 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 5.07 seconds
+05:45:16.100310 [debug] [Thread-1  ]: finished collecting timing info
+05:45:16.100557 [debug] [Thread-1  ]: On model.my_dbt_project.1_V_DBT_MODEL11: Close
+05:45:16.700911 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ea33ed8d-e93d-4a9a-9684-3394870b914d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10996a850>]}
+05:45:16.701428 [info ] [Thread-1  ]: 1 of 3 OK created procedure_definition model ECOMM.1_V_DBT_MODEL11 ............. [[32mSUCCESS 1[0m in 5.69s]
+05:45:16.701948 [debug] [Thread-1  ]: Finished running node model.my_dbt_project.1_V_DBT_MODEL11
+05:45:16.702238 [debug] [Thread-1  ]: Began running node model.my_dbt_project.2_V_DBT_MODEL1
+05:45:16.702568 [info ] [Thread-1  ]: 2 of 3 START procedure_definition model ECOMM.2_V_DBT_MODEL1 ................... [RUN]
+05:45:16.703239 [debug] [Thread-1  ]: Acquiring new snowflake connection "model.my_dbt_project.2_V_DBT_MODEL1"
+05:45:16.703405 [debug] [Thread-1  ]: Began compiling node model.my_dbt_project.2_V_DBT_MODEL1
+05:45:16.703630 [debug] [Thread-1  ]: Compiling model.my_dbt_project.2_V_DBT_MODEL1
+05:45:16.707145 [debug] [Thread-1  ]: Writing injected SQL for node "model.my_dbt_project.2_V_DBT_MODEL1"
+05:45:16.707780 [debug] [Thread-1  ]: finished collecting timing info
+05:45:16.707953 [debug] [Thread-1  ]: Began executing node model.my_dbt_project.2_V_DBT_MODEL1
+05:45:16.709454 [debug] [Thread-1  ]: Writing runtime SQL for node "model.my_dbt_project.2_V_DBT_MODEL1"
+05:45:16.710202 [debug] [Thread-1  ]: Using snowflake connection "model.my_dbt_project.2_V_DBT_MODEL1"
+05:45:16.710364 [debug] [Thread-1  ]: On model.my_dbt_project.2_V_DBT_MODEL1: /* {"app": "dbt", "dbt_version": "1.1.0", "profile_name": "my_dbt_project", "target_name": "dev", "node_id": "model.my_dbt_project.2_V_DBT_MODEL1"} */
+CREATE OR REPLACE VIEW TEST_DB.DEMO.V_DBT_MODEL1
+AS 
+SELECT * 
+FROM TEST_DB.DEMO.DBT_MODEL1;
+05:45:16.710481 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+05:45:22.026502 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 5.32 seconds
+05:45:22.032772 [debug] [Thread-1  ]: finished collecting timing info
+05:45:22.033263 [debug] [Thread-1  ]: On model.my_dbt_project.2_V_DBT_MODEL1: Close
+05:45:22.570863 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ea33ed8d-e93d-4a9a-9684-3394870b914d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108fb7460>]}
+05:45:22.571355 [info ] [Thread-1  ]: 2 of 3 OK created procedure_definition model ECOMM.2_V_DBT_MODEL1 .............. [[32mSUCCESS 1[0m in 5.87s]
+05:45:22.572016 [debug] [Thread-1  ]: Finished running node model.my_dbt_project.2_V_DBT_MODEL1
+05:45:22.572254 [debug] [Thread-1  ]: Began running node model.my_dbt_project.3_SEL_DBT_MODEL1
+05:45:22.572531 [info ] [Thread-1  ]: 3 of 3 START procedure_definition model ECOMM.3_SEL_DBT_MODEL1 ................. [RUN]
+05:45:22.573143 [debug] [Thread-1  ]: Acquiring new snowflake connection "model.my_dbt_project.3_SEL_DBT_MODEL1"
+05:45:22.573310 [debug] [Thread-1  ]: Began compiling node model.my_dbt_project.3_SEL_DBT_MODEL1
+05:45:22.573525 [debug] [Thread-1  ]: Compiling model.my_dbt_project.3_SEL_DBT_MODEL1
+05:45:22.576961 [debug] [Thread-1  ]: Writing injected SQL for node "model.my_dbt_project.3_SEL_DBT_MODEL1"
+05:45:22.577561 [debug] [Thread-1  ]: finished collecting timing info
+05:45:22.577724 [debug] [Thread-1  ]: Began executing node model.my_dbt_project.3_SEL_DBT_MODEL1
+05:45:22.579190 [debug] [Thread-1  ]: Writing runtime SQL for node "model.my_dbt_project.3_SEL_DBT_MODEL1"
+05:45:22.580087 [debug] [Thread-1  ]: Using snowflake connection "model.my_dbt_project.3_SEL_DBT_MODEL1"
+05:45:22.580234 [debug] [Thread-1  ]: On model.my_dbt_project.3_SEL_DBT_MODEL1: /* {"app": "dbt", "dbt_version": "1.1.0", "profile_name": "my_dbt_project", "target_name": "dev", "node_id": "model.my_dbt_project.3_SEL_DBT_MODEL1"} */
+CREATE or replace PROCEDURE TEST_DB.DEMO.SEL_DBT_MODEL1 ()
+  RETURNS VARCHAR
+  LANGUAGE javascript
+  AS
+  $$
+  var rs = snowflake.execute( { sqlText: 
+      'SELECT * FROM "TEST"_DB.DEMO.DBT_MODEL1;'
+       } );
+  return 'Done.';
+  $$;
+05:45:22.580443 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+05:45:27.893936 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 5.31 seconds
+05:45:27.896567 [debug] [Thread-1  ]: finished collecting timing info
+05:45:27.896781 [debug] [Thread-1  ]: On model.my_dbt_project.3_SEL_DBT_MODEL1: Close
+05:45:28.459887 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ea33ed8d-e93d-4a9a-9684-3394870b914d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109002bb0>]}
+05:45:28.460387 [info ] [Thread-1  ]: 3 of 3 OK created procedure_definition model ECOMM.3_SEL_DBT_MODEL1 ............ [[32mSUCCESS 1[0m in 5.89s]
+05:45:28.460901 [debug] [Thread-1  ]: Finished running node model.my_dbt_project.3_SEL_DBT_MODEL1
+05:45:28.462283 [debug] [MainThread]: Acquiring new snowflake connection "master"
+05:45:28.462682 [info ] [MainThread]: 
+05:45:28.462957 [info ] [MainThread]: Finished running 3 procedure_definition models in 31.32s.
+05:45:28.463195 [debug] [MainThread]: Connection 'master' was properly closed.
+05:45:28.463323 [debug] [MainThread]: Connection 'model.my_dbt_project.3_SEL_DBT_MODEL1' was properly closed.
+05:45:28.471673 [info ] [MainThread]: 
+05:45:28.472178 [info ] [MainThread]: [32mCompleted successfully[0m
+05:45:28.472644 [info ] [MainThread]: 
+05:45:28.472888 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 TOTAL=3
+05:45:28.473282 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108f6ac70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108f6acd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1099a95e0>]}
