@@ -1,0 +1,220 @@
+version: 2
+
+sources:
+  - name: medicare_cclf_claims
+    description: ""
+    database: raw
+    tables:
+      - name: parta_claims_header
+        description: ""
+        columns:
+          - name: cur_clm_uniq_id
+            description: ""
+          - name: prvdr_oscar_num
+            description: ""
+          - name: bene_mbi_id
+            description: ""
+          - name: bene_hic_num
+            description: ""
+          - name: clm_type_cd
+            description: ""
+          - name: clm_from_dt
+            description: ""
+          - name: clm_thru_dt
+            description: ""
+          - name: clm_bill_fac_type_cd
+            description: ""
+          - name: clm_bill_clsfctn_cd
+            description: ""
+          - name: prncpl_dgns_cd
+            description: ""
+          - name: admtg_dgns_cd
+            description: ""
+          - name: clm_mdcr_npmt_rsn_cd
+            description: ""
+          - name: clm_pmt_amt
+            description: ""
+          - name: clm_nch_prmry_pyr_cd
+            description: ""
+          - name: prvdr_fac_fips_st_cd
+            description: ""
+          - name: bene_ptnt_stus_cd
+            description: ""
+          - name: dgns_drg_cd
+            description: ""
+          - name: clm_op_srvc_type_cd
+            description: ""
+          - name: fac_prvdr_npi_num
+            description: ""
+          - name: oprtg_prvdr_npi_num
+            description: ""
+          - name: atndg_prvdr_npi_num
+            description: ""
+          - name: othr_prvdr_npi_num
+            description: ""
+          - name: clm_adjsmt_type_cd
+            description: ""
+          - name: clm_efctv_dt
+            description: ""
+          - name: clm_idr_ld_dt
+            description: ""
+          - name: bene_eqtbl_bic_hicn_num
+            description: ""
+          - name: clm_admsn_type_cd
+            description: ""
+          - name: clm_admsn_src_cd
+            description: ""
+          - name: clm_bill_freq_cd
+            description: ""
+          - name: clm_query_cd
+            description: ""
+          - name: dgns_prcdr_icd_ind
+            description: ""
+          - name: clm_mdcr_instnl_tot_chrg_amt
+            description: ""
+          - name: clm_mdcr_ip_pps_cptl_ime_amt
+            description: ""
+          - name: clm_oprtnl_ime_amt
+            description: ""
+          - name: clm_mdcr_ip_pps_dsprprtnt_amt
+            description: ""
+          - name: clm_hipps_uncompd_care_amt
+            description: ""
+          - name: clm_oprtnl_dsprtnt_amt
+            description: ""
+
+      - name: parta_claims_revenue_center_detail
+        description: ""
+        columns:
+          - name: cur_clm_uniq_id
+            description: ""
+          - name: prvdr_oscar_num
+            description: ""
+          - name: bene_mbi_id
+            description: ""
+          - name: bene_hic_num
+            description: ""
+          - name: clm_type_cd
+            description: ""
+          - name: clm_from_dt
+            description: ""
+          - name: clm_thru_dt
+            description: ""
+          - name: clm_bill_fac_type_cd
+            description: ""
+          - name: clm_bill_clsfctn_cd
+            description: ""
+          - name: prncpl_dgns_cd
+            description: ""
+          - name: admtg_dgns_cd
+            description: ""
+          - name: clm_mdcr_npmt_rsn_cd
+            description: ""
+          - name: clm_pmt_amt
+            description: ""
+          - name: clm_nch_prmry_pyr_cd
+            description: ""
+          - name: prvdr_fac_fips_st_cd
+            description: ""
+          - name: bene_ptnt_stus_cd
+            description: ""
+          - name: dgns_drg_cd
+            description: ""
+          - name: clm_op_srvc_type_cd
+            description: ""
+          - name: fac_prvdr_npi_num
+            description: ""
+          - name: oprtg_prvdr_npi_num
+            description: ""
+          - name: atndg_prvdr_npi_num
+            description: ""
+          - name: othr_prvdr_npi_num
+            description: ""
+          - name: clm_adjsmt_type_cd
+            description: ""
+          - name: clm_efctv_dt
+            description: ""
+          - name: clm_idr_ld_dt
+            description: ""
+          - name: bene_eqtbl_bic_hicn_num
+            description: ""
+          - name: clm_admsn_type_cd
+            description: ""
+          - name: clm_admsn_src_cd
+            description: ""
+          - name: clm_bill_freq_cd
+            description: ""
+          - name: clm_query_cd
+            description: ""
+          - name: dgns_prcdr_icd_ind
+            description: ""
+          - name: clm_mdcr_instnl_tot_chrg_amt
+            description: ""
+          - name: clm_mdcr_ip_pps_cptl_ime_amt
+            description: ""
+          - name: clm_oprtnl_ime_amt
+            description: ""
+          - name: clm_mdcr_ip_pps_dsprprtnt_amt
+            description: ""
+          - name: clm_hipps_uncompd_care_amt
+            description: ""
+          - name: clm_oprtnl_dsprtnt_amt
+            description: ""
+
+      - name: parta_diagnosis_code
+        description: ""
+        columns:
+          - name: cur_clm_uniq_id
+            description: ""
+          - name: bene_mbi_id
+            description: ""
+          - name: bene_hic_num
+            description: ""
+          - name: clm_type_cd
+            description: ""
+          - name: clm_prod_type_cd
+            description: ""
+          - name: clm_val_sqnc_num
+            description: ""
+          - name: clm_dgns_cd
+            description: ""
+          - name: bene_eqtbl_bic_hicn_num
+            description: ""
+          - name: prvdr_oscar_num
+            description: ""
+          - name: clm_from_dt
+            description: ""
+          - name: clm_thru_dt
+            description: ""
+          - name: clm_poa_ind
+            description: ""
+          - name: dgns_prcdr_icd_ind
+            description: ""
+
+      - name: parta_procedure_code
+        description: ""
+        columns:
+          - name: cur_clm_uniq_id
+            description: ""
+          - name: bene_mbi_id
+            description: ""
+          - name: bene_hic_num
+            description: ""
+          - name: clm_type_cd
+            description: ""
+          - name: clm_val_sqnc_num
+            description: ""
+          - name: clm_prcdr_cd
+            description: ""
+          - name: clm_prcdr_prfrm_dt
+            description: ""
+          - name: bene_eqtbl_bic_hicn_num
+            description: ""
+          - name: prvdr_oscar_num
+            description: ""
+          - name: clm_from_dt
+            description: ""
+          - name: clm_thru_dt
+            description: ""
+          - name: dgns_prcdr_icd_ind
+            description: ""
